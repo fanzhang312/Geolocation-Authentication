@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document><Folder><name>TC_FOOTPRINTS</name>
+<Schema name="TC_FOOTPRINTS" id="TC_FOOTPRINTS">
+	<SimpleField name="Name" type="string"></SimpleField>
+	<SimpleField name="Description" type="string"></SimpleField>
+	<SimpleField name="OBJECTID" type="int"></SimpleField>
+	<SimpleField name="CAMPUS_NUM" type="string"></SimpleField>
+	<SimpleField name="BUILDING_N" type="string"></SimpleField>
+	<SimpleField name="NAME" type="string"></SimpleField>
+	<SimpleField name="NAME_ABBRE" type="string"></SimpleField>
+	<SimpleField name="ADDRESS1" type="string"></SimpleField>
+	<SimpleField name="ADDRESS2" type="string"></SimpleField>
+	<SimpleField name="CITY" type="string"></SimpleField>
+	<SimpleField name="STATE" type="string"></SimpleField>
+	<SimpleField name="ZIP" type="string"></SimpleField>
+	<SimpleField name="SHAPE_AREA" type="float"></SimpleField>
+	<SimpleField name="SHAPE_LEN" type="float"></SimpleField>
+</Schema>
+
+<Placemark>
+	<name>Coffman Memorial Union</name>
+  <Style><LineStyle><color>ff0000ff</color></LineStyle>  <PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#TC_FOOTPRINTS">
+		<SimpleData name="Name">Coffman Memorial Union</SimpleData>
+		<SimpleData name="OBJECTID">2399</SimpleData>
+		<SimpleData name="CAMPUS_NUM">01</SimpleData>
+		<SimpleData name="BUILDING_N">064</SimpleData>
+		<SimpleData name="NAME_ABBRE">CMU</SimpleData>
+		<SimpleData name="ADDRESS1">300 Washington Avenue SE</SimpleData>
+		<SimpleData name="ADDRESS2">NULL</SimpleData>
+		<SimpleData name="CITY">Minneapolis</SimpleData>
+		<SimpleData name="STATE">MN</SimpleData>
+		<SimpleData name="ZIP">55455</SimpleData>
+		<SimpleData name="SHAPE_AREA">4567.79186636000</SimpleData>
+		<SimpleData name="SHAPE_LEN">366.04673890700</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><outerBoundaryIs><LinearRing><coordinates>-93.23474925975907,44.97254472803202,0 -93.23508220181985,44.972543972970854,0 -93.235090258993182,44.972623538304155,0 -93.23522170277154,44.972623267654114,0 -93.235264037744045,44.972576528641049,0 -93.235302764080501,44.972592914362053,0 -93.235229625536888,44.972669903146283,0 -93.235384679685168,44.97277111869704,0 -93.235581833352327,44.972767968381255,0 -93.235585080844487,44.972617030150019,0 -93.235677864301451,44.972616838717428,0 -93.235673695453968,44.972542753903006,0 -93.235948103289758,44.972543565510087,0 -93.235946609537336,44.972967952070412,0 -93.235895297384801,44.972968002256465,0 -93.23589513490839,44.973014060269662,0 -93.235699213657341,44.973014250535492,0 -93.235698969069503,44.973083336655776,0 -93.234975925440779,44.973084037118824,0 -93.234976192220373,44.973008371414828,0 -93.234789601047737,44.973008551725691,0 -93.234789740527674,44.972969073300966,0 -93.234747757164982,44.972969114594832,0 -93.23474925975907,44.97254472803202,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  
+  </Folder></Document></kml>

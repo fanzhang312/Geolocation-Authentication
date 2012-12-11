@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document><Folder><name>TC_FOOTPRINTS</name>
+<Schema name="TC_FOOTPRINTS" id="TC_FOOTPRINTS">
+	<SimpleField name="Name" type="string"></SimpleField>
+	<SimpleField name="Description" type="string"></SimpleField>
+	<SimpleField name="OBJECTID" type="int"></SimpleField>
+	<SimpleField name="CAMPUS_NUM" type="string"></SimpleField>
+	<SimpleField name="BUILDING_N" type="string"></SimpleField>
+	<SimpleField name="NAME" type="string"></SimpleField>
+	<SimpleField name="NAME_ABBRE" type="string"></SimpleField>
+	<SimpleField name="ADDRESS1" type="string"></SimpleField>
+	<SimpleField name="ADDRESS2" type="string"></SimpleField>
+	<SimpleField name="CITY" type="string"></SimpleField>
+	<SimpleField name="STATE" type="string"></SimpleField>
+	<SimpleField name="ZIP" type="string"></SimpleField>
+	<SimpleField name="SHAPE_AREA" type="float"></SimpleField>
+	<SimpleField name="SHAPE_LEN" type="float"></SimpleField>
+</Schema>
+
+<Placemark>
+	<name>104 Union Street</name>
+  <Style><LineStyle><color>ff0000ff</color></LineStyle>  <PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#TC_FOOTPRINTS">
+		<SimpleData name="Name">104 Union Street</SimpleData>
+		<SimpleData name="OBJECTID">2488</SimpleData>
+		<SimpleData name="CAMPUS_NUM">01</SimpleData>
+		<SimpleData name="BUILDING_N">106</SimpleData>
+		<SimpleData name="NAME_ABBRE">104UNST</SimpleData>
+		<SimpleData name="ADDRESS1">104 Union Street SE</SimpleData>
+		<SimpleData name="CITY">Minneapolis</SimpleData>
+		<SimpleData name="STATE">MN</SimpleData>
+		<SimpleData name="ZIP">55455</SimpleData>
+		<SimpleData name="SHAPE_AREA">19.81491603000</SimpleData>
+		<SimpleData name="SHAPE_LEN">18.46371627280</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><outerBoundaryIs><LinearRing><coordinates>-93.232788022219381,44.975852474573891,0 -93.232744946615384,44.975851087845754,0 -93.232745081849643,44.975799239851426,0 -93.232788160913245,44.97579929698221,0 -93.232788022219381,44.975852474573891,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  
+  </Folder></Document></kml>

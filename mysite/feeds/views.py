@@ -21,11 +21,10 @@ def index(request):
     api = tweepy.API(auth)
     
     # Get umnSUA timeline
-    # statuses = tweepy.Cursor(api.user_timeline,id="umnSUA",include_rts="false",exclude_replies="true").items(3)
-    test = api.user_timeline(id="umnSUA",include_rts="false",exclude_replies="true",count=3)
-    
-    status = jsonpickle.encode(test)
-    return HttpResponse(status, mimetype="application/json")
-    # return render_to_response('feeds/index.html',{'latest_feed_list':statuses})
+    statuses = tweepy.Cursor(api.user_timeline,id="UMNCSE",include_rts="false",exclude_replies="true").items(20)
+    # test = api.user_timeline(id="umnSUA",include_rts="false",exclude_replies="true",count=3)
+    # status = jsonpickle.encode(test)
+    # return HttpResponse(status, mimetype="application/json")
+    return render_to_response('feeds/index.html',{'latest_feed_list':statuses})
 
 

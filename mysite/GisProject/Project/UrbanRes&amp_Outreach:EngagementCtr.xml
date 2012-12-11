@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document><Folder><name>TC_FOOTPRINTS</name>
+<Schema name="TC_FOOTPRINTS" id="TC_FOOTPRINTS">
+	<SimpleField name="Name" type="string"></SimpleField>
+	<SimpleField name="Description" type="string"></SimpleField>
+	<SimpleField name="OBJECTID" type="int"></SimpleField>
+	<SimpleField name="CAMPUS_NUM" type="string"></SimpleField>
+	<SimpleField name="BUILDING_N" type="string"></SimpleField>
+	<SimpleField name="NAME" type="string"></SimpleField>
+	<SimpleField name="NAME_ABBRE" type="string"></SimpleField>
+	<SimpleField name="ADDRESS1" type="string"></SimpleField>
+	<SimpleField name="ADDRESS2" type="string"></SimpleField>
+	<SimpleField name="CITY" type="string"></SimpleField>
+	<SimpleField name="STATE" type="string"></SimpleField>
+	<SimpleField name="ZIP" type="string"></SimpleField>
+	<SimpleField name="SHAPE_AREA" type="float"></SimpleField>
+	<SimpleField name="SHAPE_LEN" type="float"></SimpleField>
+</Schema>
+
+<Placemark>
+	<name>Urban Res &amp; Outreach/Engagement Ctr</name>
+  <Style><LineStyle><color>ff0000ff</color></LineStyle>  <PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#TC_FOOTPRINTS">
+		<SimpleData name="Name">Urban Res &amp; Outreach/Engagement Ctr</SimpleData>
+		<SimpleData name="OBJECTID">2542</SimpleData>
+		<SimpleData name="CAMPUS_NUM">01</SimpleData>
+		<SimpleData name="BUILDING_N">135</SimpleData>
+		<SimpleData name="NAME_ABBRE">UROC</SimpleData>
+		<SimpleData name="ADDRESS1">2001 Plymouth Avenue North</SimpleData>
+		<SimpleData name="CITY">Minneapolis</SimpleData>
+		<SimpleData name="STATE">MN</SimpleData>
+		<SimpleData name="ZIP">55411</SimpleData>
+		<SimpleData name="SHAPE_AREA">2124.62043611000</SimpleData>
+		<SimpleData name="SHAPE_LEN">208.96149602800</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><outerBoundaryIs><LinearRing><coordinates>-93.306799000859357,44.990812166094798,0 -93.306795056420924,44.991082455474071,0 -93.306785101072734,44.991082561434197,0 -93.306785143509686,44.991089327179033,0 -93.306739116777806,44.991088916094014,0 -93.306739103089413,44.99108254455696,0 -93.306662643642241,44.991082047738743,0 -93.306662572594774,44.991070865718441,0 -93.306230674012454,44.991069668820167,0 -93.306230310498634,44.991080496429319,0 -93.305911021567198,44.991079407704163,0 -93.305914157873872,44.9907837665519,0 -93.306232306012618,44.990785339030964,0 -93.306232354381237,44.990810383202515,0 -93.306799000859357,44.990812166094798,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  
+  </Folder></Document></kml>

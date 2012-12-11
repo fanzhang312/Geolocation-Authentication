@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document><Folder><name>TC_FOOTPRINTS</name>
+<Schema name="TC_FOOTPRINTS" id="TC_FOOTPRINTS">
+	<SimpleField name="Name" type="string"></SimpleField>
+	<SimpleField name="Description" type="string"></SimpleField>
+	<SimpleField name="OBJECTID" type="int"></SimpleField>
+	<SimpleField name="CAMPUS_NUM" type="string"></SimpleField>
+	<SimpleField name="BUILDING_N" type="string"></SimpleField>
+	<SimpleField name="NAME" type="string"></SimpleField>
+	<SimpleField name="NAME_ABBRE" type="string"></SimpleField>
+	<SimpleField name="ADDRESS1" type="string"></SimpleField>
+	<SimpleField name="ADDRESS2" type="string"></SimpleField>
+	<SimpleField name="CITY" type="string"></SimpleField>
+	<SimpleField name="STATE" type="string"></SimpleField>
+	<SimpleField name="ZIP" type="string"></SimpleField>
+	<SimpleField name="SHAPE_AREA" type="float"></SimpleField>
+	<SimpleField name="SHAPE_LEN" type="float"></SimpleField>
+</Schema>
+
+<Placemark>
+	<name>717 Delaware Street SE</name>
+  <Style><LineStyle><color>ff0000ff</color></LineStyle>  <PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#TC_FOOTPRINTS">
+		<SimpleData name="Name">717 Delaware Street SE</SimpleData>
+		<SimpleData name="OBJECTID">2321</SimpleData>
+		<SimpleData name="CAMPUS_NUM">01</SimpleData>
+		<SimpleData name="BUILDING_N">193</SimpleData>
+		<SimpleData name="NAME_ABBRE">717 DEL</SimpleData>
+		<SimpleData name="ADDRESS1">717 Delaware Street SE</SimpleData>
+		<SimpleData name="ADDRESS2">NULL</SimpleData>
+		<SimpleData name="CITY">Minneapolis</SimpleData>
+		<SimpleData name="STATE">MN</SimpleData>
+		<SimpleData name="ZIP">55414</SimpleData>
+		<SimpleData name="SHAPE_AREA">2624.90674086000</SimpleData>
+		<SimpleData name="SHAPE_LEN">231.03946710300</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><outerBoundaryIs><LinearRing><coordinates>
+	  -93.224072,44.971288,0 
+	  -93.223015,44.971311,0 
+	  -93.223015,44.970814,0 
+	  -93.224114,44.970833,0 
+	  -93.224072,44.971288,0 </coordinates></LinearRing></outerBoundaryIs></Polygon>
+</Placemark>
+  
+  </Folder></Document></kml>

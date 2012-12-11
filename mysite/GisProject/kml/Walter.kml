@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document><Folder><name>TC_FOOTPRINTS</name>
+<Schema name="TC_FOOTPRINTS" id="TC_FOOTPRINTS">
+	<SimpleField name="Name" type="string"></SimpleField>
+	<SimpleField name="Description" type="string"></SimpleField>
+	<SimpleField name="OBJECTID" type="int"></SimpleField>
+	<SimpleField name="CAMPUS_NUM" type="string"></SimpleField>
+	<SimpleField name="BUILDING_N" type="string"></SimpleField>
+	<SimpleField name="NAME" type="string"></SimpleField>
+	<SimpleField name="NAME_ABBRE" type="string"></SimpleField>
+	<SimpleField name="ADDRESS1" type="string"></SimpleField>
+	<SimpleField name="ADDRESS2" type="string"></SimpleField>
+	<SimpleField name="CITY" type="string"></SimpleField>
+	<SimpleField name="STATE" type="string"></SimpleField>
+	<SimpleField name="ZIP" type="string"></SimpleField>
+	<SimpleField name="SHAPE_AREA" type="float"></SimpleField>
+	<SimpleField name="SHAPE_LEN" type="float"></SimpleField>
+</Schema>
+
+<Placemark>
+	<name>Walter Library</name>
+  <Style><LineStyle><color>ff0000ff</color></LineStyle>  <PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#TC_FOOTPRINTS">
+		<SimpleData name="Name">Walter Library</SimpleData>
+		<SimpleData name="OBJECTID">2407</SimpleData>
+		<SimpleData name="CAMPUS_NUM">01</SimpleData>
+		<SimpleData name="BUILDING_N">042</SimpleData>
+		<SimpleData name="NAME_ABBRE">WALIB</SimpleData>
+		<SimpleData name="ADDRESS1">117 Pleasant Street SE</SimpleData>
+		<SimpleData name="ADDRESS2">NULL</SimpleData>
+		<SimpleData name="CITY">Minneapolis</SimpleData>
+		<SimpleData name="STATE">MN</SimpleData>
+		<SimpleData name="ZIP">55455</SimpleData>
+		<SimpleData name="SHAPE_AREA">4039.76279648000</SimpleData>
+		<SimpleData name="SHAPE_LEN">262.02650007900</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><outerBoundaryIs><LinearRing><coordinates>-93.236614313263871,44.975574645927878,0 -93.235888569408374,44.975576144535182,0 -93.23588771410023,44.975369064181628,0 -93.235867117963991,44.975369107620509,0 -93.235866433156701,44.975202671684727,0 -93.235887031784586,44.975202631841611,0 -93.235886161891116,44.974990442888597,0 -93.23661185650775,44.974988944398525,0 -93.236612393323696,44.975117018763399,0 -93.236702476939527,44.975116832091935,0 -93.236703968672103,44.975480061929758,0 -93.236613917461781,44.975480248535249,0 -93.236614313263871,44.975574645927878,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  
+  </Folder></Document></kml>

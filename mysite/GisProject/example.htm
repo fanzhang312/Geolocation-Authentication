@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Limited Access Network based on Geolocation</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+  
+	<link href="http://code.google.com//apis/maps/documentation/javascript/examples/default.css" rel="stylesheet" type="text/css">
+    <!--
+    Include the maps javascript with sensor=true because this code is using a
+    sensor (a GPS locator) to determine the user's location.
+    See: https://developers.google.com/apis/maps/documentation/javascript/basics#SpecifyingSensor
+    
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+	-->
+	<!-- Be sure to specifiy libraries as geometry, in order to use google.maps.geometry.poly.containsLocation() -->
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=geometry&sensor=true"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>
+      var map,securityLayer,marker2,marker,polySector3PillburyPleasant,markerIn,polyg,pos;
+
+      function initialize() {
+        var mapOptions = {
+          zoom: 6,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        map = new google.maps.Map(document.getElementById('map_canvas'),
+            mapOptions);
+
+        // Try HTML5 geolocation
+        if(navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            pos = new google.maps.LatLng(position.coords.latitude,
+                                             position.coords.longitude);
+			var infowindow = new google.maps.InfoWindow({
+				content: "Current Location<br/>"+"Latitude: "+position.coords.latitude+"<br/>Longitude: "+position.coords.longitude
+			});
+            marker = new google.maps.Marker({
+              map: map,
+              position: pos,
+              content: 'Location found using HTML5.'
+            });
+			google.maps.event.addListener(marker,'click',function(){
+				infowindow.open(map,marker);
+			});
+			//securityLayer = new google.maps.KmlLayer('https://dl.dropbox.com/u/17221987/Essex.kml');
+			//securityLayer.setMap(map);
+			
+			$(document).ready(function(){
+			$.ajax({
+				url: "/static/kml/KennethKeller.kml",
+				dataType: ($.browser.msie) ? "text" : "xml",
+				success: function(data){
+				 var xml;
+				 if (typeof data == "string") 
+					{
+					xml = new ActiveXObject("Microsoft.XMLDOM");
+					xml.async = false;
+					xml.loadXML(data);
+					}
+				 else 
+					{
+					xml = data;
+					$(xml).find('coordinates').each(function()
+					{
+						/*var coords = $(this).find('coordinates').text();
+						alert(coords);*/
+						var coords = $(this).text();
+						
+						var coordsArray = [];
+						
+						coordsArray = coords.split(/[\s,]+/); //split by comma and space
+						var pathArray = [];
+						
+						for (var i = 0; i < coordsArray.length; i++)
+							{
+							var latNum;
+							var longNum;
+							
+							if (coordsArray[i]!='' && coordsArray[i] != 0 && coordsArray[i] > 0)
+								{
+								latNum = coordsArray[i];
+								longNum = coordsArray[i-1];
+								var latLng = new google.maps.LatLng(latNum,longNum);
+								pathArray.push(latLng);
+								
+								polyg = new google.maps.Polygon({
+									paths: pathArray,
+									strokeColor: "#8b0000",
+									strokeOpacity: 1,
+									fillColor:"#b22222",
+									fillOpacity: 0.1,
+									map: map
+									});
+								polyg.setMap(map);
+								
+								}
+							}
+						if(google.maps.geometry.poly.containsLocation(pos, polyg) == true)
+							//set a time delay to display the map
+							setTimeout(function(){
+								window.location.replace("http://127.0.0.1:8000/feeds");
+							},3000);
+						else 
+							alert("Your current location dones not meet the requirement");
+					});
+				 }
+				 
+			   }
+			 });
+		});
+			map.setZoom(15);
+			map.setCenter(pos);
+          }, function() {
+            handleNoGeolocation(true);
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleNoGeolocation(false);
+        }
+      }
+
+      function handleNoGeolocation(errorFlag) {
+        if (errorFlag) {
+          var content = 'Error: The Geolocation service failed.';
+        } else {
+          var content = 'Error: Your browser doesn\'t support geolocation.';
+        }
+
+        var options = {
+          map: map,
+          position: new google.maps.LatLng(60, 105),
+          content: content
+        };
+
+        var infowindow = new google.maps.InfoWindow(options);
+        map.setCenter(options.position);
+      }
+
+      
+    </script>
+  </head>
+  <body onload="initialize()">
+    <div id="map_canvas"></div>
+  </body>
+</html>

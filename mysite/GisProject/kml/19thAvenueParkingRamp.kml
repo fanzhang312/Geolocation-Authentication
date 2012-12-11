@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document><Folder><name>TC_FOOTPRINTS</name>
+<Schema name="TC_FOOTPRINTS" id="TC_FOOTPRINTS">
+	<SimpleField name="Name" type="string"></SimpleField>
+	<SimpleField name="Description" type="string"></SimpleField>
+	<SimpleField name="OBJECTID" type="int"></SimpleField>
+	<SimpleField name="CAMPUS_NUM" type="string"></SimpleField>
+	<SimpleField name="BUILDING_N" type="string"></SimpleField>
+	<SimpleField name="NAME" type="string"></SimpleField>
+	<SimpleField name="NAME_ABBRE" type="string"></SimpleField>
+	<SimpleField name="ADDRESS1" type="string"></SimpleField>
+	<SimpleField name="ADDRESS2" type="string"></SimpleField>
+	<SimpleField name="CITY" type="string"></SimpleField>
+	<SimpleField name="STATE" type="string"></SimpleField>
+	<SimpleField name="ZIP" type="string"></SimpleField>
+	<SimpleField name="SHAPE_AREA" type="float"></SimpleField>
+	<SimpleField name="SHAPE_LEN" type="float"></SimpleField>
+</Schema>
+
+<Placemark>
+	<name>19th Avenue Parking Ramp</name>
+  <Style><LineStyle><color>ff0000ff</color></LineStyle>  <PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#TC_FOOTPRINTS">
+		<SimpleData name="Name">19th Avenue Parking Ramp</SimpleData>
+		<SimpleData name="OBJECTID">2493</SimpleData>
+		<SimpleData name="CAMPUS_NUM">01</SimpleData>
+		<SimpleData name="BUILDING_N">217</SimpleData>
+		<SimpleData name="NAME_ABBRE">19THRAMP</SimpleData>
+		<SimpleData name="ADDRESS1">300 19th Avenue S</SimpleData>
+		<SimpleData name="ADDRESS2">NULL</SimpleData>
+		<SimpleData name="CITY">Minneapolis</SimpleData>
+		<SimpleData name="STATE">MN</SimpleData>
+		<SimpleData name="ZIP">55455</SimpleData>
+		<SimpleData name="SHAPE_AREA">3302.42001816000</SimpleData>
+		<SimpleData name="SHAPE_LEN">264.56350008900</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><outerBoundaryIs><LinearRing><coordinates>-93.245883392708464,44.970961022502856,0 -93.245883282973892,44.97093623040562,0 -93.245814127684866,44.970936380175281,0 -93.245813466223026,44.970781526058381,0 -93.245850703701208,44.970781449504067,0 -93.24584805203024,44.970161938486946,0 -93.245893383502818,44.970161841794067,0 -93.245893167825187,44.970112551948958,0 -93.246257950978446,44.970111769562308,0 -93.246258165684978,44.970161055808049,0 -93.246293083354558,44.970160980510812,0 -93.246296308375406,44.97091392832786,0 -93.246261383896737,44.970914000940169,0 -93.246261581629412,44.970960207640651,0 -93.245883392708464,44.970961022502856,0</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  
+  </Folder></Document></kml>
